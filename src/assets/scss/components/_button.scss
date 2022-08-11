@@ -14,6 +14,11 @@
     box-shadow: .2rem .5rem 1rem .1rem rgba($color-green, .4);
   }
 
+  &--white {
+    background-color: $color-white;
+    color: $color-green-1;
+  }
+
   &--outline {
     border: .1rem solid $color-yellow;
     background-color: transparent;

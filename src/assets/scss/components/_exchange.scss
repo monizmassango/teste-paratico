@@ -6,6 +6,7 @@
   border-radius: 2rem;
   padding: 2rem;
   padding-top: 5rem;
+  box-shadow: 0 .5rem 1rem .4rem rgba($color-dark-1, .1);
   animation-name: moveInRight;
   animation-duration: 1s;
   animation-timing-function: ease-out;
@@ -22,8 +23,8 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    background: rgb(226, 241, 228);
-    box-shadow: 0 1rem 3rem .1rem rgba($color-yellow, .2);
+    background: white;
+    box-shadow: 0 1rem 2rem .1rem rgba($color-green, .1);
     width: 8rem;
     height: 8rem;
     border-radius: 50%;
