@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  justify-content: space-between;
+  max-width: 90vw;
+  width: 100%;
+  margin: 0 4rem;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    position: relative;
+    top: unset;
+    left: unset;
+    transform: translate(0, 0);
+  }
+
+  .btn {
+    margin-top: 3rem;
+  }
+
+  .btn--main {
+    margin-right: 4rem;
+  }
+
+  .content {
+    &:first-child {
+      width: 40%;
+
+      @include respond(tab-port) {
+        margin-top: 4rem;
+        width: 100%;
+        text-align: center;
+
+        button {
+          display: none;
+        }
+      }
+    }
+
+    width: 50%;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+  }
+
+}

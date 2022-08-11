@@ -1,0 +1,22 @@
+.btn {
+  display: inline-block;
+  padding: 1.3rem 5rem;
+  text-align: center;
+  border-radius: 4rem;
+  border: none;
+  font-size: 1.5rem;
+  outline: none;
+  cursor: pointer;
+
+  &--main {
+    background-color: $color-green;
+    color: $color-white;
+    box-shadow: .2rem .5rem 1rem .1rem rgba($color-green, .4);
+  }
+
+  &--outline {
+    border: .1rem solid $color-yellow;
+    background-color: transparent;
+    color: $color-yellow;
+  }
+}

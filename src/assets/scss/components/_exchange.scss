@@ -1,0 +1,55 @@
+.exchange {
+  background-color: $color-white;
+  position: relative;
+  margin: 10rem;
+  margin-top: 3rem;
+  border-radius: 2rem;
+  padding: 2rem;
+  padding-top: 5rem;
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+
+  @include respond(tab-port) {
+    margin: 2rem;
+  }
+
+  @include respond(tab-land) {
+    margin: 5rem;
+  }
+
+  &__top {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(226, 241, 228);
+    box-shadow: 0 1rem 3rem .1rem rgba($color-yellow, .2);
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    top: -3em;
+
+    div {
+      position: absolute;
+      background-color: $color-yellow;
+      width: 6rem;
+      height: 6rem;
+      border-radius: 50%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border: 1rem solid $color-white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+  }
+
+  &__rate {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,88 @@
+<div class="container">
+  <div class="content">
+    <span class="hot"
+      ><img src="assets/img/cash.png" alt="" /> cambio diário</span
+    >
+    <h1 class="heading-primary">
+      Consulte o <span>Cambio</span> <br />
+      do dia aqui!
+    </h1>
+    <ul class="point__list">
+      <li class="point__item">
+        <img src="assets/img/arrow.png" />Lorem, ipsum dolor.
+      </li>
+      <li class="point__item">
+        <img src="assets/img/arrow.png" />Lorem ipsum dolor sit amet.
+      </li>
+      <li class="point__item">
+        <img src="assets/img/arrow.png" />Lorem, ipsum dolor.
+      </li>
+    </ul>
+    <button class="btn btn--main">botao 1</button>
+    <button class="btn btn--outline">botao 2</button>
+  </div>
+  <div class="content">
+    <div class="exchange">
+      <div class="exchange__top">
+        <div>&UpArrowDownArrow;</div>
+      </div>
+      <form class="form" [formGroup]="formGroup">
+        <div class="form__row">
+          <div class="form__group">
+            <label class="form__label">Valor</label>
+            <input
+              class="form__input"
+              formControlName="base"
+              type="text"
+              placeholder="0"
+              (input)="onInput()"
+            />
+          </div>
+          <div class="form__group">
+            <label class="form__label">Moeda</label>
+            <select
+              class="form__input"
+              formControlName="baseCoin"
+              (change)="onChange()"
+            >
+              <option *ngFor="let code of codesCompare" value="{{ code }}">
+                {{ code }}
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form__row">
+          <div class="form__group">
+            <label class="form__label">Valor</label>
+            <input
+              class="form__input"
+              formControlName="result"
+              type="text"
+              placeholder="0"
+            />
+          </div>
+          <div class="form__group">
+            <label class="form__label">Moeda</label>
+            <select
+              class="form__input"
+              formControlName="compareCoin"
+              (change)="onChangeCompare()"
+            >
+              <option *ngFor="let code of codes" value="{{ code }}">
+                {{ code }}
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="exchange__rate">
+          1 &nbsp; {{ f["baseCoin"].value }} &rarr; {{ base_exchange }} &nbsp;
+          {{ f["compareCoin"].value }}
+        </div>
+        <button class="btn btn--main" (click)="onInvert()">
+          Inverter &UpArrowDownArrow;
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

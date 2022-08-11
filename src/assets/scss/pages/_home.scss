@@ -1,0 +1,13 @@
+.hot {
+  background-color: $color-white;
+  padding: .5rem 1rem;
+  border-radius: 4rem;
+  color: rgba($color-dark-1, .4);
+  display: inline-flex;
+  align-items: center;
+
+  img {
+    width: 1.8rem;
+    margin-right: 1rem;
+  }
+}

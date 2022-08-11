@@ -1,0 +1,22 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 2rem 4rem;
+  background-color: $color-white;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin: 0 3rem;
+  }
+
+  &--logo {
+    width: 10rem;
+  }
+
+  button {
+    margin-left: auto;
+  }
+}
