@@ -1,1 +1,62 @@
-<p>exchangerate works!</p>
+<div class="exchange">
+  <div class="exchange__top">
+    <div>&UpArrowDownArrow;</div>
+  </div>
+  <form class="form" [formGroup]="formGroup">
+    <div class="form__row">
+      <div class="form__group">
+        <label class="form__label">Valor</label>
+        <input
+          class="form__input"
+          formControlName="base"
+          type="text"
+          placeholder="0"
+          (input)="onInput()"
+        />
+      </div>
+      <div class="form__group">
+        <label class="form__label">Moeda</label>
+        <select
+          class="form__input"
+          formControlName="baseCoin"
+          (change)="onChange()"
+        >
+          <option *ngFor="let code of codesCompare" value="{{ code }}">
+            {{ code }}
+          </option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form__row">
+      <div class="form__group">
+        <label class="form__label">Valor</label>
+        <input
+          class="form__input"
+          formControlName="result"
+          type="text"
+          placeholder="0"
+        />
+      </div>
+      <div class="form__group">
+        <label class="form__label">Moeda</label>
+        <select
+          class="form__input"
+          formControlName="compareCoin"
+          (change)="onChangeCompare()"
+        >
+          <option *ngFor="let code of codes" value="{{ code }}">
+            {{ code }}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="exchange__rate">
+      1 &nbsp; {{ f["baseCoin"].value }} &rarr; {{ base_exchange }} &nbsp;
+      {{ f["compareCoin"].value }}
+    </div>
+    <button class="btn btn--main" (click)="onInvert()">
+      Inverter &UpArrowDownArrow;
+    </button>
+  </form>
+</div>
